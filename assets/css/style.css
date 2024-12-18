@@ -1,0 +1,13 @@
+@import url('reset.css');
+@import url('header.css');
+@import url('fonts.css');
+
+body {
+   font-size: 1rem;
+   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+   background-color: #f6f6f6;
+}
+
+body a {
+     color: #2f3241;
+}

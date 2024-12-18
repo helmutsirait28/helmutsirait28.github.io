@@ -1,0 +1,36 @@
+header {
+  height: 100vh;
+}
+/* navigation */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.navigation a {
+   text-decoration: none;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 30%;
+}
+.logo {
+   
+}
+.dark-mode-btn {
+   border-radius: 50px;
+}
+.light-active {
+     transition: 1s;
+}
+.dark-active {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+
+
