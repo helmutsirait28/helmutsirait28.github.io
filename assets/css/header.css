@@ -74,7 +74,7 @@ header {
 }
 /* hamburger menu */
 .hamburger-btn {
-    margin-left: 65%;
+    margin-left: 50%;
     cursor: pointer;
     padding: 0;
     user-select: none;

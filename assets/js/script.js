@@ -49,3 +49,23 @@ hamBtn.addEventListener('click', function() {
             });
        }
 });
+
+// tabs 
+const tab = document.querySelector('.skills-button');
+const tabButton = document.querySelectorAll('.tab-button');
+const list = document.querySelectorAll('.list');
+
+tab.addEventListener('click', function(e) {
+    const id = e.target.dataset.id;
+    if( id ) {
+          for(let i = 0; i < tabButton.length; i++) { 
+               tabButton[i].classList.remove('active');
+          }
+          e.target.classList.add('active');
+             for(let i = 0; i < list.length; i++) { 
+               list[i].classList.remove('active');
+          }
+          const element = document.getElementById(id);
+            element.classList.add("active");
+    }
+});
