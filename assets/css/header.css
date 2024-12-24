@@ -59,6 +59,7 @@ header {
 /* dark-mode */
 #dark-mode-btn {
     border-radius: 50px;
+    padding: .5em 1em;
     z-index: 2;
     cursor: pointer;
 }
@@ -129,8 +130,9 @@ align-items: center;
 /*       border: 1px solid black; */
 /*       justify-content: center; */
        align-items: center;
-       gap: 2rem;
+       gap: 1rem;
        font-weight: normal;
+       margin-bottom: 20px;
 }
 .hero-heading span {
      width: max-content;
@@ -148,4 +150,7 @@ align-items: center;
       letter-spacing: 3px;
       font-family: 'Alex Brush';
 }
+
+
+
 

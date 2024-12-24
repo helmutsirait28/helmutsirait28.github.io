@@ -1,3 +1,49 @@
-#about {
-	height: 100vh;
+.about {
+	  height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+         padding-block: 20px; 
+/*         border:  1px solid black; */
+}
+.about h3 {
+	  font-weight: 500;
+         border-bottom: 2px solid black;
+         padding-bottom: 10px;
+         font-variant: small-caps;	  
+}
+.about-content {
+	  width: 900px;
+	  max-width: 90%;
+	  display: flex;
+/* 	  height: auto; */
+	  justify-content: center;
+	  flex-direction: column;
+	  align-items: center;
+	  overflow: hidden;
+	  padding: 1rem;
+}
+.about-my-picture {
+	  max-width: calc(50% + 40px);
+	  display: flex;
+	  justify-content: center;
+}
+.about-explain-me {
+/* 	   border: 1px solid black; */
+	   width: 100%;
+	   display: flex;
+	   flex-direction: column;
+	   justify-content: center;
+	   gap: 1rem;
+}
+.about-my-picture img{
+       width: 100%;
+       height: auto;
+}
+.about-explain-me p {
+	   width: 100%;
+	   hyphens: auto;
+	   text-align: justify;
+	   text-justify: inter-word;
+/* 	   word-spacing: -4px; */
 }

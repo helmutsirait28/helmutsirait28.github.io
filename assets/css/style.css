@@ -1,60 +1,52 @@
-@import url('reset.css');
+/* @import url('reset.css'); */
 @import url('header.css');
 @import url('fonts.css');
 @import url('about.css');
+@import url('responsive.css');
 
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+
+/* style */
 body {
    font-size: 1rem;
    font-family: 'Poppins', Arial, Helvetica, sans-serif;
    background-color: #f6f6f6; 
    overflow-x: hidden;
+   line-height: 1.1;
+   height: 100vh;
 }
 
 body a {
      color: #2f3241;
 }
 
-/* Mobile screen ( Potrait and Landscape ) */
-@media ( width >= 768px ) {
-      /* Navigation */
-      .navigation {
-           justify-content: space-between;
-      }
-      .nav-menu {
-          flex-direction: row;
-          position: unset;
-          background-color: unset;
-          justify-content: space-between;
-          width: 30%;
-          height: unset;
-          opacity: unset;
-          visibility: unset;
-          pointer-events: unset;
-      }
-      .nav-menu a {
-         all: unset;
-         cursor: pointer;
-      }
-      .nav-menu a:hover {
-         background-color: unset;
-   }
-      .hamburger-btn {
-           display: none;
-      }
+/* main{ 
+   width: 100vw;
+   box-sizing: border-box;
+ } */
 
+ .btn{
+    display: inline-block;
+    background-color: #333;
+    font-weight: 700;
+    color: white;
+    text-decoration: none; 
+    text-transform: uppercase;
+    padding: 1em 3em;
+    margin: 0 1.5em; 
 }
 
-/* Tablet screen ( Potrait and Landscape ) */
-@media ( 768px <= width <= 1023px ) {
-     
+.btn-sm{
+    font-size: 0.5em;
 }
 
-/* Laptop screen ( Potrait and Landscape ) */
-@media ( 1024px <= width 1439px ) {
-   
+.btn-lg{
+    font-size: 2em;
 }
-/* Dekstop screen ( Potrait and Landscape ) */
-@media ( width >= 1440px ) {
-   
-}
+
 
