@@ -1,27 +1,34 @@
 .skills {
 	  height: 100vh;
-	  border:  1px solid black;
-	  padding-block: 20px;
 	  display: flex;
 	  flex-direction: column;
 	  align-items: center;
+	  justify-content: center;
+	  gap: 1rem;
 }
 
 .skills-content {
 	   width: 900px;
 	   max-width: 90%;
-	   border: 1px solid black;
+/* 	   border: 1px solid black; */
+	   display: flex;
+	   flex-direction: column;
+	   align-items: center;
+	   gap: 1rem;
+	   flex-wrap: wrap;
 }
 
 .skills h3 {
 	  font-weight: 500;
-         border-bottom: 2px solid black;
+          border-bottom: 2px solid #333;
          padding-bottom: 10px;
-         font-variant: small-caps;	  
+         font-variant: small-caps;
 }
 
 button.active {
-  background-color: white;
+	   border: 1px solid blue;
+	   color: #49fef3;
+/*   background-color: white; */
 }
 
 .list {
@@ -31,4 +38,10 @@ button.active {
 
 .list.active {
   display: block;
+}
+.skills-button {
+/* 	  border: 1px solid black; */
+}
+.skills-button button{
+       padding: ;
 }

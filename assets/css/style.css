@@ -4,6 +4,7 @@
 @import url('about.css');
 @import url('responsive.css');
 @import url('skills.css');
+@import url('projects.css');
 
 /* reset */
 * {
@@ -34,12 +35,13 @@ body a {
  .btn{
     display: inline-block;
     background-color: #333;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
     text-decoration: none; 
     text-transform: uppercase;
-    padding: 1em 3em;
-    margin: 0 1.5em; 
+    padding: 1em 1em;
+    letter-spacing: .5px;
+/*     margin: 0 .3em;  */
 }
 
 .btn-sm{
