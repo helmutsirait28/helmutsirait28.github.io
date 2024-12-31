@@ -35,12 +35,20 @@
         flex-direction: row;
     }
     .about-my-picture {
-        height: 400px;
+        width: 300px;
+        height: 350px;
     }
     .about-explain-me {
         width: 300px;
     }
-
+    .about-explain-me p {
+        transform: translateX(-20px);
+}
+/*  projetcs   */
+  .container-projects .card-projects{
+        display: flex;
+        flex-direction: row; 
+   }
 
 }
 

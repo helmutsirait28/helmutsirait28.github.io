@@ -1,6 +1,7 @@
 .container-projects {
-    height: 100vh;
-    border: 1px solid black;
+    min-height: 100vh;
+    height: auto;
+/*     border: 1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,22 +19,22 @@
 .card-projects{
 	 width: 900px;
 	 max-width: 90%;
-/* 	 border: 1px solid black;	 */
-/* 	 margin: auto; */
 	 display: flex;
+	 flex-direction: column;
 	 align-items: center;
 	 justify-content: space-between;
-	 flex-wrap: wrap;
+	 gap: .5rem;
 }
 .card {
 /* 	 border: 1px solid green; */
 	 width: max-content;
    
-background-color: #2d3436;
-background-image: linear-gradient(315deg, #2d3436 2%, #d3d3d3 99%);
+/* background-color: #2d3436; */
+/* background-image: linear-gradient(315deg, #2d3436 2%, #d3d3d3 99%); */
 
-	border: .5rem solid #beb7af;
-    box-shadow: 0 0 .9rem rgba(102, 0, 255, .5);
+	border: .2rem solid rgba(0, 0, 0, .2);
+	padding: 1rem;
+    box-shadow: 0 0 .9rem rgba(255, 255, 255, .2);
 }
 .card-image{
 	  width: 250px;

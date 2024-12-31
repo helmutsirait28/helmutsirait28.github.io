@@ -20,12 +20,16 @@
 	  flex-direction: column;
 	  align-items: center;
 	  overflow: hidden;
-	  padding: 1rem;
+	  padding-top: 1rem;
+	  gap: 2px;
+/* 	  border:  1px solid black; */
 }
-.about-my-picture {
-	  max-width: calc(50% + 40px);
+.about-content .about-my-picture {
+	 
+	  max-width: calc(80% - 10px);
 	  display: flex;
 	  justify-content: center;
+		position: relative;
 }
 .about-explain-me {
 /* 	   border: 1px solid black; */
@@ -33,16 +37,25 @@
 	   display: flex;
 	   flex-direction: column;
 	   justify-content: center;
-	   gap: 1rem;
+	   align-items: center;
+	   gap: .5rem;
 }
 .about-my-picture img{
        width: 100%;
-       height: auto;
+/*        height: auto; */
+        mask-image: url('../images/icon/brush.svg'); 
+        mask-size: 100%;
+				mask-repeat: no-repeat;
+				mask-position: center -10px;
+				border-style: none;
+				mask-mode: alpha;
+				mask-origin: padding-box;
 }
 .about-explain-me p {
-	   width: 100%;
+	   width: 80%;
 	   hyphens: auto;
 	   text-align: justify;
 	   text-justify: inter-word;
+		 font-weight: 300;
 /* 	   word-spacing: -4px; */
 }
