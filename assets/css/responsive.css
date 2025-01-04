@@ -27,27 +27,47 @@
     .hamburger-btn {
         display: none;
     }
+
+    #dark-mode-btn {
+          margin-left: unset;
+    }
     /*  about  */
     .about {
         padding-block: 40px;
     }
     .about-content {
         flex-direction: row;
+        gap: 0;
     }
     .about-my-picture {
-        width: 300px;
+        width: 350px;
         height: 350px;
     }
     .about-explain-me {
-        width: 300px;
+        width: 350px;
+        height: 350px;
+
     }
     .about-explain-me p {
-        transform: translateX(-20px);
+        transform: translateX(-35px);
 }
 /*  projetcs   */
   .container-projects .card-projects{
         display: flex;
         flex-direction: row; 
+   }
+
+   .about-my-picture img {
+         transform: translateX(40px);
+   }
+
+/*  contact   */
+   .contact .container-contact {
+       flex-direction: row;
+   }
+
+   .container-contact .contact-sosial-media p {
+        width: 50%;
    }
 
 }

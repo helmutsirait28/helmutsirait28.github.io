@@ -24,12 +24,12 @@
                     <a href="#projects" class="nav-link">projects</a>
                     <a href="#contact" class="nav-link">contact</a>
                 </div>
+                <button class="dark-active" id="dark-mode-btn">dark</button>
                 <button class="hamburger-btn">
                     <span class="icon-bar1"></span>
                     <span class="icon-bar2"></span>
                     <span class="icon-bar3"></span>
                 </button>
-                <button class="dark-active" id="dark-mode-btn">dark</button>
             </nav>
             <section class="hero">
                 <h2 class="hero-heading">
@@ -50,7 +50,7 @@
                 <h3>A Bit About Me</h3>
                 <div class="about-content">
                     <figure class="about-my-picture">
-                        <img src="./assets/images/profile.png" alt="my picture as a profile ">
+                        <img src="./assets/images/about-me.png" alt="my picture as a profile ">
                     </figure>
                     <div class="about-explain-me">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis quo labore, repudiandae, at quis animi minima, harum saepe dolore, atque magnam velit eligendi ipsum vero. Id excepturi, libero ut illo.</p>
@@ -173,29 +173,39 @@
                            <div class="contact-sosial-media">
                                   <p>Let's talk</p>
                                   <p>Have you any project? please drop a message or follow my sosial media</p> 
+                                  <div class="contact-sosial-media-icon">
+                                        <a href=""><img src="assets/images/icon/icons8-facebook-logo.svg" alt="facebook logo"></a>
+                                        <a href=""><img src="assets/images/icon/icons8-instagram-logo.svg" alt="instagram logo"></a>
+                                        <a href=""><img src="assets/images/icon/icons8-x.svg" alt="twitter logo"></a>
+                                  </div>
                            </div>
                            <div class="contact-form">
                                   <form>
                                        <div class="form-control">
-                                              <label for="name">Name</label>
-                                        <input type="text" id="name">
+                                              <label for="name" class="form-label">Name</label>
+                                        <input type="text" id="name" class="input-field" placeholder="e.g Jhon Doe">
                                        </div> 
                                        <div class="form-control">
-                                              <label for="email">email</label>
-                                        <input type="email" id="email">
+                                              <label for="email" class="form-label">email</label>
+                                        <input type="email" id="email" class="input-field" placeholder="e.g jhondoe@gmail.com">
                                        </div> 
                                        <div class="form-control">
-                                              <label for="message">email</label>
-                                         <textarea row="10"id="message"></textarea>
+                                              <label for="message" class="form-label">Message</label>
+                                         <textarea row="10"id="message" class="input-field" placeholder="Write message..."></textarea>
                                        </div>
-                                       
+                                      <button class="btn btn-sm">send</button> 
                                   </form>
                            </div>
                     </div>
             </section>
             <!-- end of contact -->
         </main>
-        <footer></footer>
+
+        <!-- footer -->
+        <footer>
+               <p class="copyright">&copy; 2025 Helmut Sirait</p>
+        </footer>
+        <!-- end of footer -->
         <script src="./assets/js/script.js"></script>
     </body>
 

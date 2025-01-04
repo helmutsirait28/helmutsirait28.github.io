@@ -6,12 +6,17 @@
 @import url('skills.css');
 @import url('projects.css');
 @import url('contact.css');
+@import url('footer.css');
 
 /* reset */
 * {
     margin: 0;
     padding: 0;
-   box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+     position: relative;
 }
 
 /* style */
@@ -21,7 +26,9 @@ body {
    background-color: #f6f6f6; 
    overflow-x: hidden;
    line-height: 1.1;
-   height: 100vh;
+/*    height: 100vh; */
+   margin-bottom: 100px;
+/*    margin-top: 30px; */
 }
 
 body a {
@@ -35,16 +42,20 @@ body a {
 
  .btn{
     display: inline-block;
-    background-color: #333;
+    background-color: #2caae1;
     font-weight: 500;
+
     color: white;
     text-decoration: none; 
     text-transform: uppercase;
     padding: 1em 1em;
     letter-spacing: .5px;
+    border: none;
 /*     margin: 0 .3em;  */
 }
-
+.btn:hover {
+      opacity: .7;
+}
 .btn-sm{
     font-size: 0.5em;
 }

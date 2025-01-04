@@ -35,7 +35,7 @@ header {
     color: unset;
     font-weight: 500;
 }
-.nav-menu.active {
+.nav-menu.active {      
     opacity: 1;
      pointer-events: visible;
      visibility: visible;
@@ -62,21 +62,24 @@ header {
 #dark-mode-btn {
     border-radius: 50px;
     padding: .5em 1em;
-    z-index: 2;
+/*     z-index: 2; */
     cursor: pointer;
+     margin-left: 50%;
+     transition: unset;
 }
 .light-active {
 /*      border-radius: 50px; */
-    transition: 1s;
+    transition: .5s;
 }
 .dark-active {
     background-color: black;
     color: white;
-    transition: 1s;
+    transition: background-color .5s color .5s;
+/*  transition: 1s; */
 }
 /* hamburger menu */
 .hamburger-btn {
-    margin-left: 50%;
+   
     cursor: pointer;
     padding: 0;
     user-select: none;
