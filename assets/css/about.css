@@ -1,5 +1,6 @@
 .about {
-	  height: 100vh;
+	   min-height: 100vh;
+         height: auto;
 	  display: flex;
 	  flex-direction: column;
 	  align-items: center;
@@ -8,8 +9,9 @@
 .about h3 {
 	  font-weight: 500;
          border-bottom: 2px solid #333;
-         padding-bottom: 10px;
+/*          padding-bottom: 10px; */
          font-variant: small-caps;	  
+
 }
 .about-content {
 	  width: 900px;
@@ -25,10 +27,11 @@
 /* 	  border:  1px solid black; */
 }
 .about-content .about-my-picture {
-	 
-	  max-width: calc(80% - 70px);
+/* 	  border: 1px solid black; */
+	  max-width: calc(70% + 30px);
 	  display: flex;
-	  justify-content: right;
+	  justify-content: center;
+	  align-items: center;
 /*          position: relative; */
 /*          border: 1px solid black; */
 }
@@ -52,6 +55,7 @@
 				border-style: none;
 				mask-mode: alpha;
 				mask-origin: padding-box; */
+	 transform: translateX(-10px);			
 }
 .about-explain-me p {
 	   width: 80%;

@@ -10,12 +10,11 @@
 .skills-content {
 	   width: 900px;
 	   max-width: 90%;
-/* 	   border: 1px solid black; */
 	   display: flex;
 	   flex-direction: column;
+	   justify-content: space-evenly;
 	   align-items: center;
-	   gap: 1rem;
-	   flex-wrap: wrap;
+/* 	   border: 1px solid black; */
 }
 
 .skills h3 {
@@ -25,23 +24,9 @@
          font-variant: small-caps;
 }
 
-button.active {
-	   border: 1px solid blue;
-	   color: #49fef3;
-/*   background-color: white; */
+.skills-content h4 {
+	  text-align: center;
+	  font-weight: 500;
+	  margin-bottom: 10px;
 }
 
-.list {
-  display: none;
-  padding: 10px 20px;
-}
-
-.list.active {
-  display: block;
-}
-.skills-button {
-/* 	  border: 1px solid black; */
-}
-.skills-button button{
-       padding: ;
-}

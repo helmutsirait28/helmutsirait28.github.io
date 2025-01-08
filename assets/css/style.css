@@ -4,9 +4,9 @@
 @import url('about.css');
 @import url('responsive.css');
 @import url('skills.css');
-@import url('projects.css');
-@import url('contact.css');
-@import url('footer.css');
+/* @import url('projects.css'); */
+/* @import url('contact.css'); */
+/* @import url('footer.css'); */
 
 /* reset */
 * {
@@ -17,6 +17,7 @@
 
 html {
      position: relative;
+/*      z-index: -1; */
 }
 
 /* style */

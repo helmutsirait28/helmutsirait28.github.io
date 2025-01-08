@@ -1,9 +1,10 @@
 /* Mobile screen ( Potrait and Landscape ) */
 @media (width >=768px) {
     /* Navigation */
-    .navigation {
+    header .navigation {
         justify-content: space-between;
-    }
+/*         padding: .6rem; */
+        }
     .nav-menu {
         flex-direction: row;
         position: unset;
@@ -30,7 +31,15 @@
 
     #dark-mode-btn {
           margin-left: unset;
+        
     }
+     section.skills {
+          gap: 5rem;
+     }
+     .skills .skills-content {
+          flex-direction: row;
+     } 
+
     /*  about  */
     .about {
         padding-block: 40px;
@@ -62,6 +71,9 @@
    }
 
 /*  contact   */
+  #contact {
+      margin-top: 0;
+  }
    .contact .container-contact {
        flex-direction: row;
    }
@@ -73,9 +85,29 @@
 }
 
 /* Tablet screen ( Potrait and Landscape ) */
-@media (768px <=width <=1023px) {}
+@media (768px <=width <=1023px) {
+/* navigation */
+          .nav-menu {
+             width: 40%;
+          }
+}
 
 /* Laptop screen ( Potrait and Landscape ) */
-@media (1024px <=width 1439px) {}
+@media (1024px <= width <= 1439px) {
+         .nav-menu {
+             width: 45%;
+          }
+}
 /* Dekstop screen ( Potrait and Landscape ) */
-@media (width >=1440px) {}
+@media (width >=1440px) {
+   /*    header .navigation {
+         width: 100%;
+         border: 5px solid red;
+    } */
+   
+        button#dark-mode-btn {
+          border: 1px solid black;
+/*           margin-right: 120px; */
+    }
+
+}
