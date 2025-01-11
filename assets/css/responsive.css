@@ -36,7 +36,7 @@
      section.skills {
           gap: 5rem;
      }
-     .skills .skills-content {
+    .skills .skills-content {
           flex-direction: row;
      } 
 
@@ -95,7 +95,7 @@
 /* Laptop screen ( Potrait and Landscape ) */
 @media (1024px <= width <= 1439px) {
          .nav-menu {
-             width: 45%;
+             width: 36%;
           }
 }
 /* Dekstop screen ( Potrait and Landscape ) */

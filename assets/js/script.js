@@ -5,6 +5,7 @@ const iconBurger1 = hamBtn.querySelector('.icon-bar1');
 const iconBurger2 = hamBtn.querySelector('.icon-bar2');
 const iconBurger3 = hamBtn.querySelector('.icon-bar3');
 const nav = document.querySelector('.navigation');
+const hero = document.querySelector('.hero');
 
 // change color navigation, to scroll 
 window.addEventListener('scroll', function() {
@@ -24,6 +25,8 @@ darkModeBtn.addEventListener('click', function() {
               this.classList.add('light-active');
               setTheme.classList.add('dark-active');
               theme = 'DARK';
+              hero.classList.add('bg-dark');
+              
         }else {
               this.innerHTML = 'Dark';
                this.classList.remove("light-active");
@@ -31,6 +34,8 @@ darkModeBtn.addEventListener('click', function() {
               setTheme.classList.remove('dark-active');
               setTheme.classList.add('light-active');
               theme = 'LIGHT';
+               hero.classList.remove('bg-dark');
+
         }
          localStorage.setItem("PageTheme", JSON.stringify(theme));
 });
@@ -39,7 +44,8 @@ let getTheme = JSON.parse(localStorage.getItem("PageTheme"));
 if(getTheme === "DARK") {
       setTheme.classList = 'dark-active';
       darkModeBtn.classList = 'light-active';
-      darkModeBtn.innerHTML = 'light';
+      darkModeBtn.innerHTML = 'Light';
+      hero.classList.add('bg-dark')
 }
 
 // hamburger button 

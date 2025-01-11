@@ -4,16 +4,22 @@
 @import url('about.css');
 @import url('responsive.css');
 @import url('skills.css');
-/* @import url('projects.css'); */
-/* @import url('contact.css'); */
-/* @import url('footer.css'); */
+@import url('projects.css');
+@import url('contact.css');
+@import url('footer.css');
 
 /* reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+
 
 html {
      position: relative;
@@ -27,9 +33,8 @@ body {
    background-color: #f6f6f6; 
    overflow-x: hidden;
    line-height: 1.1;
-/*    height: 100vh; */
    margin-bottom: 100px;
-/*    margin-top: 30px; */
+   width: 100%;
 }
 
 body a {
@@ -64,5 +69,16 @@ body a {
 .btn-lg{
     font-size: .7em;
 }
+
+section {
+     outline: none;
+}
+
+
+
+
+
+
+
 
 
