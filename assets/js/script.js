@@ -1,3 +1,30 @@
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxGSweTXSIBikZokb2yquFu7NOTkaJJP6_AvajG35E0adQJVzdn3CjqBPgH27N3uTgd7g/exec'
+  const form = document.forms['helmut-contact-form'];
+  const sentBtn = document.querySelector('.btn-sent');
+  const btnLoading = document.querySelector('.btn-loading');
+  const myAlert = document.querySelector('.my-alert');
+
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    // click submit button 
+    // show button loading, remove button send
+    btnLoading.classList.toggle('button-active');
+    sentBtn.classList.toggle('button-remove');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         // show  sent button, remove button loading 
+         btnLoading.classList.toggle('button-active');
+         sentBtn.classList.toggle('button-remove');
+         // show alert 
+         myAlert.classList.toggle('alert-active');
+         // reset form 
+         form.reset();
+        console.log('Success!', response)
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+
 const darkModeBtn = document.querySelector('#dark-mode-btn');
 const setTheme = document.body;
 const hamBtn = document.querySelector('.hamburger-btn');

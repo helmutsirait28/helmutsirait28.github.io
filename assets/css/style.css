@@ -1,4 +1,5 @@
-/* @import url('reset.css'); */
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css);
+@import url('reset.css');
 @import url('header.css');
 @import url('fonts.css');
 @import url('about.css');
@@ -9,7 +10,7 @@
 @import url('footer.css');
 
 /* reset */
-*, *::before, *::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -75,7 +76,220 @@ section {
 }
 
 
+.button {
+  background-color: #4980E3;
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  padding: 0.625rem 0;
+  border: 1px solid #006DE1;
+  text-align: center;
+  width: max-content;
+  display: none;
+}
 
+.button-active {
+      display: unset;
+}
+
+.button-remove {
+      display: none;
+}
+
+.spinner {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 12px;
+}
+.spinner span {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+}
+.spinner span:before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+.spinner span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.spinner span:nth-child(2) {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.spinner span:nth-child(3) {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.spinner span:nth-child(4) {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.spinner span:nth-child(5) {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.spinner span:nth-child(6) {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.spinner span:nth-child(7) {
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+.spinner span:nth-child(8) {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.spinner span:first-child:before {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+.spinner span:last-child:before {
+  width: 3.4px;
+  height: 3.4px;
+  border-radius: 3.4px;
+  -webkit-border-radius: 3.4px;
+  -moz-border-radius: 3.4px;
+}
+
+.pulse {
+  -webkit-animation: spin 1s infinite steps(8);
+  animation: spin 1s infinite steps(8);
+}
+
+.spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.spinner-circle {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  display: inline-block;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  position: relative;
+}
+.spinner-circle:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 14px solid rgba(73, 128, 227, 0.5);
+  border-right: 14px solid transparent;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: block;
+}
+
+.alert {
+    display: none;
+}
+
+.alert-active {
+      display: inherit;
+}
+
+.alert .inner {
+  display: block;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 3px;
+  border: 1px solid rgb(180,180,180);
+  background-color: rgb(212,212,212);
+}
+
+.alert .close {
+  float: right;
+  margin: 3px 12px 0px 0px;
+  cursor: pointer;
+}
+
+.alert .inner,.alert .close {
+  color: rgb(88,88,88);
+}
+
+.alert input {
+  display: none;
+}
+
+.alert input:checked ~ * {
+  animation-name: dismiss,hide;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,100ms;
+}
+
+.alert.success .inner {
+  border: 1px solid rgb(214,233,198);
+  background-color: rgb(223,240,216);
+}
+
+.alert.success .inner,.alert.success .close {
+  color: rgb(70,136,71);
+}
+
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+
+@keyframes hide {
+  100% {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+}
 
 
 
