@@ -64,9 +64,24 @@
 .form-control .input-field {
      display: block;
 /*      width: 100%; */
+     font-weight: 500;
      width: 100%;
      padding: 10px;
      padding-left: 40px;
+     transition: .5s;
+/*      background-color: transparent; */
+     border: 1px solid #ced4da;
+     background-clip: padding-box;
+     border-radius: 0.25rem;
+     color: black;
+}
+
+.form-control .input-field:focus {
+  color: #495057;
+/*   background-color: rgba(0, 0, 0, 0.01); */
+  border-color: #b4add3;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
 }
 
 .form-control textarea {

@@ -75,17 +75,57 @@ if(getTheme === "DARK") {
       hero.classList.add('bg-dark')
 }
 
+const navMenu = document.querySelector('.nav-menu');
+const navLink = document.querySelectorAll('.nav-link');
 // hamburger button 
 hamBtn.addEventListener('click', function() {
-       const navMenu = document.querySelector('.nav-menu');
-       const navLink = document.querySelectorAll('.nav-link');
+       
        iconBurger1.classList.toggle('active');
        iconBurger2.classList.toggle('active');
        iconBurger3.classList.toggle('active');
        navMenu.classList.toggle('active');
+       setTheme.classList.toggle('hiddenY');
        
        for( let i = 0; i < navLink.length; i++) {
             navLink[i].addEventListener('click', function() {
+                  // call the smoothScroll function
+           function smoothScroll(event) {
+           event.preventDefault();
+         // window.requestAnimationFrame()
+               const targetId = event.currentTarget.getAttribute('href') === '#' ? 'header' :  event.currentTarget.getAttribute('href');
+               const duration = 1000;
+               const targetPosition = document.querySelector(targetId).offsetTop - 60;
+               const startPosition = window.pageYOffset;
+               const distance = targetPosition - startPosition;
+              let start = null;
+              window.requestAnimationFrame(step);
+              function step(timestamp) {
+                if( !start ) start = timestamp;
+                const progress = timestamp - start;
+                window.scrollTo(0, isInOutQuadCubic(progress, startPosition, distance, duration));
+                if( progress < duration) window.requestAnimationFrame(step);
+                 
+                  function linear(t, b, c, d) {
+                      return c * t / d + b; 
+                  } 
+
+                  function isInOutQuad(t, b, c, d) {
+                      t /= d / 2;
+                      if( t < 1 ) return c / 2 * t * t + b;
+                      t--;
+                      return -c / 2 * (t * (t - 2) - 1) + b; 
+                  }
+                 
+                 function isInOutQuadCubic(t, b, c, d) {
+                      t /= d / 2;
+                      if( t < 1 ) return c / 2 * t * t * t + b;
+                      t -= 2
+                      return c / 2 * (t * t * t + 2) + b; 
+                  }
+              }
+           } 
+           smoothScroll(event);    
+
                  if( navMenu.classList.contains('active')) {
                      hamBtn.click();
                  }
@@ -93,24 +133,46 @@ hamBtn.addEventListener('click', function() {
        }
 });
 
-// tabs 
-// const tab = document.querySelector('.skills-button');
-// const tabButton = document.querySelectorAll('.tab-button');
-// const list = document.querySelectorAll('.list');
 
-// tab.addEventListener('click', function(e) {
-//     const id = e.target.dataset.id;
-//     if( id ) {
-//           for(let i = 0; i < tabButton.length; i++) { 
-//                tabButton[i].classList.remove('active');
-//           }
-//           e.target.classList.add('active');
-//              for(let i = 0; i < list.length; i++) { 
-//                list[i].classList.remove('active');
-//           }
-//           const element = document.getElementById(id);
-//             element.classList.add("active");
-//     }
-// });
+// smooth scroll 
+for( let i = 0; i < navLink.length; i++ ){
+     navLink[i].addEventListener('click', function(event) {
+            // call the smoothScroll function
+           function smoothScroll(event) {
+           event.preventDefault();
+         // window.requestAnimationFrame()
+               const targetId = event.currentTarget.getAttribute('href') === '#' ? 'header' :  event.currentTarget.getAttribute('href');
+               const duration = 1000;
+               const targetPosition = document.querySelector(targetId).offsetTop;
+               const startPosition = window.pageYOffset;
+               const distance = targetPosition - startPosition;
+              let start = null;
+              window.requestAnimationFrame(step);
+              function step(timestamp) {
+                if( !start ) start = timestamp;
+                const progress = timestamp - start;
+                window.scrollTo(0, isInOutQuadCubic(progress, startPosition, distance, duration));
+                if( progress < duration) window.requestAnimationFrame(step);
+                 
+                  function linear(t, b, c, d) {
+                      return c * t / d + b; 
+                  } 
 
-
+                  function isInOutQuad(t, b, c, d) {
+                      t /= d / 2;
+                      if( t < 1 ) return c / 2 * t * t + b;
+                      t--;
+                      return -c / 2 * (t * (t - 2) - 1) + b; 
+                  }
+                 
+                 function isInOutQuadCubic(t, b, c, d) {
+                      t /= d / 2;
+                      if( t < 1 ) return c / 2 * t * t * t + b;
+                      t -= 2
+                      return c / 2 * (t * t * t + 2) + b; 
+                  }
+              }
+           } 
+           smoothScroll(event);
+     });
+}
