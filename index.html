@@ -8,6 +8,7 @@
         <meta name="descripttion" content="Personal Website Portfolio">
         <meta name="keywords" content="HTML5, CSS, JavaScript">
         <meta name="author" content="Helmut Sirait">
+         <link rel="shortcut icon" href="assets/images/small-logo.ico" type="image/x-icon" />
         <title>SIRAIT</title>
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
@@ -183,15 +184,15 @@
                     <form name="helmut-contact-form">
                         <div class="form-control">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" class="input-field" placeholder="e.g Jhon Doe" name="name" />
+                            <input type="text" id="name" class="input-field" placeholder="e.g Jhon Doe" name="name" required autocomplete="off" pattern="[a-zA-Z0-9]+" minlength="4" maxlength="10" />
                         </div>
                         <div class="form-control">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="input-field" placeholder="e.g jhondoe@gmail.com" name="email">
+                            <input type="email" id="email" class="input-field" placeholder="e.g jhondoe@gmail.com" name="email" required autocomplete="off" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
                         </div>
                         <div class="form-control">
                             <label for="message" class="form-label">Message</label>
-                            <textarea row="10" id="message" class="input-field" placeholder="Write message..." name="message"></textarea>
+                            <textarea row="10" id="message" class="input-field" placeholder="Write message..." name="message" required></textarea>
                         </div>
                         <button class="btn btn-primary btn-sm" type="submit">Send</button>
                         <button class="button btn-loading">
