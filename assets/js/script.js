@@ -1,7 +1,7 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxGSweTXSIBikZokb2yquFu7NOTkaJJP6_AvajG35E0adQJVzdn3CjqBPgH27N3uTgd7g/exec'
   const form = document.forms['helmut-contact-form'];
   const sentBtn = document.querySelector('.btn-sent');
-  const btnLoading = document.querySelector('.btn-loading');
+  const btnLoading = document.querySelector('.btn-loader');
   const myAlert = document.querySelector('.my-alert');
 
 
@@ -9,12 +9,12 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxGSweTXSIBikZokb2yqu
     e.preventDefault();
     // click submit button 
     // show button loading, remove button send
-    btnLoading.classList.toggle('button-active');
+    btnLoading.classList.toggle('active');
     sentBtn.classList.toggle('button-remove');
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
          // show  sent button, remove button loading 
-         btnLoading.classList.toggle('button-active');
+         btnLoading.classList.toggle('active');
          sentBtn.classList.toggle('button-remove');
          // show alert 
          myAlert.classList.toggle('alert-active');

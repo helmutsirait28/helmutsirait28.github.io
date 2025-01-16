@@ -127,7 +127,7 @@ section {
 
 
 
-.button {
+/* .button {
   background-color: #4980E3;
   color: #FFFFFF;
   font-size: 1.125rem;
@@ -135,11 +135,13 @@ section {
   border: 1px solid #006DE1;
   text-align: center;
   width: max-content;
-  display: none;
+/*   display: none;
 }
+ */
 
-.button-active {
-      display: unset;
+
+.btn-loader.active {
+      display: flex;
 }
 
 .button-remove {
@@ -346,6 +348,50 @@ header, main, footer {
   overflow: hidden;
 }
 
+.container-button {
+   width: 165px;
+   gap: 20px;
+   display: flex;
+/*    justify-content: space-between; */
+}
 
 
+.btn-loader {
+         width: max-content;
+/*          display: flex; */
+            display: none;
+            gap: 10px;
+/*         display: inline-block; */
+          align-items: center;
+          justify-content: space-between;
+    font-weight: 500;
+    color: #212529;
+    text-align: center;
+    padding: 0.275rem 0.35rem;
+     vertical-align: middle;
+       user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.1rem;
+      color: #fff;
+  background-color: #17a2b8;
+/*   border-color: #17a2b8; */
+      }
 
+      .loader {
+          display: inline-block;
+           border: 2px solid #f3f3f3;
+  border-top: 2px solid blue;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+/*   margin: 25px; */
+  animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}

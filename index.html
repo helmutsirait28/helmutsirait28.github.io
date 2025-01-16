@@ -194,20 +194,13 @@
                             <label for="message" class="form-label">Message</label>
                             <textarea row="10" id="message" class="input-field" placeholder="Write message..." name="message" required></textarea>
                         </div>
-                        <button class="btn btn-primary btn-sm btn-sent" type="submit">Send</button>
-                        <button class="button btn-loading">
-                            <span class="spinner pulse">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                            loading
-                        </button>
+                        <div class="container-button">
+                                <button class="btn btn-primary btn-sm btn-sent" type="submit">Send</button>
+                         <div class="btn-loader btn-primary">
+                                 <span class="loader"></span>
+                                 <span>Loading</span>
+                         </div>
+                        </div>
                     </form>
                 </div>
             </div>
